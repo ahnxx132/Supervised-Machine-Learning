@@ -18,17 +18,15 @@ The data is located in the Resources folder.
 
 Import the data using Pandas.
 
-## Consider the models
+## Abstract
+### For this Project, I have used two models, a logistic regression and a random forests classifier to predict the loan status of the individual borrower based on his/her/their credit worthiness measured by i.e. debt-to-income ratio, number of accounts open, total debts, and their incomes. we will be using binary classification models and training them using 7 varibales as shown in the dataframe to predict the loan status of individual borrowers.
 
-You will be creating and comparing two models on this data: a logistic regression, and a random forests classifier. Before you create, fit, and score the models, make a prediction as to which model you think will perform better. You do not need to be correct! Write down your prediction (in markdown cells in your Jupyter Notebook or in a separate document), and provide justification for your educated guess.
+## Prediction
+### I suspect the accuracy of the model to predict the loan status as "disapproved" or "1" to not be perfect as I see right off the bat from the table, with some individuals having a high total debt, high number of accounts open, and debt-to-income ratio did get approved which is denoted by "0."
 
-## Fit a LogisticRegression model and RandomForestClassifier model
-
-Create a LogisticRegression model, fit it to the data, and print the model's score. Do the same for a RandomForestClassifier. You may choose any starting hyperparameters you like. Which model performed better? How does that compare to your prediction? Write down your results and thoughts.
-
-## Rubric
-
-[Unit 19 - Supervised Machine Learning Homework Rubric](https://docs.google.com/document/d/1eZcQul7s2gy6h9flygyPdajSPUtqOQUuGL1XXcuX6p4/edit?usp=sharing)
+## Conclusion
+### Our **Random Forests model** that we trained had an accuracy of 100% to predict the approval of loan based on the individual's credit-worthiness measures. but As we have anticipated, accuracy was only 87% when predicting the loan disapproval. This validates our observation on the data by which despite the high debt, debt-to-income, and number of accounts open for some individuals, they were given a loan. This is perhaps due to the fact that the credit worthiness threhold varies by institution.
+For our prediction, **adaptive boosting classifier** actually helped us get a higher prediction accuracy. The accuracy of the prediction may have improved due to the weight of incorrectly classified instances were adjusted by boosting the good decision trees and reducing the bad trees.
 
 ### References
 
